@@ -1,0 +1,12 @@
+# Sembunyikan file sensitif
+<FilesMatch "^(database\.sql|README\.txt)$">
+  Require all denied
+</FilesMatch>
+
+# Nonaktifkan directory listing
+Options -Indexes
+
+# Force HTTPS (opsional, hapus tanda # di bawah jika sudah pasang SSL)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
